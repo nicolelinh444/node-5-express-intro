@@ -2,6 +2,23 @@
 // Boilerplate Code to Set Up Server
 // ---------------------------------
 
+// Importing all of our Node modules
+import express from "express"; // the framework that lets us build web servers
+
+// Creating an instance of express so we can use all of its methods, 
+const app = express();
+
+// Defining our port number
+const port = 3000;
+
+// Declaring that this server will be receiving and responding to requests in JSON
+app.use(express.json());
+
+// Turn on our server so that it can listen for requests and respond to them at the port number
+app.listen(port, () => {
+    console.log(`The server is listening on port: ${port}`);
+});
+
 // ---------------------------------
 // Helper Functions
 // ---------------------------------
